@@ -136,7 +136,4 @@ TBD
 ## Resources
 
 - **Original nanoGPT**: [Andrej Karpathy's implementation](https://github.com/karpathy/nanoGPT)
-
-
-
----
+- **Rax**: [Source code](https://github.com/viraatdas/rax)
