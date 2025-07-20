@@ -127,41 +127,13 @@ python train.py config/my_config.py
 ```
 
 ## 📈 Performance & Results
-
-- **Training Speed**: Same as vanilla JAX (no runtime overhead)
-- **Memory Efficiency**: Compile-time optimization with static argument detection
-- **Error Prevention**: 100% of shape mismatches caught before training
-- **Development Speed**: 10x faster debugging with clear error messages
+TBD
 
 ### Benchmark Results
-```
-Model: 7.25M parameters
-Loss: 10.8 → 6.6 in 100 iterations
-Speed: ~15-17 seconds per 10 iterations  
-Memory: Efficient GPU utilization with safety checks
-```
+TBD
 
 
-## 🏆 Comparison: Before vs After RAX
-
-| Aspect | Without RAX | With RAX |
-|--------|-------------|----------|
-| **Error Detection** | Runtime (after hours) | Compile-time (seconds) |
-| **Shape Documentation** | Comments (if any) | Function signatures |
-| **Memory Safety** | Trial and error | Compile-time analysis |
-| **Team Onboarding** | Read implementation | Read type signatures |
-| **Debugging Speed** | Hours of investigation | Clear error messages |
-| **Production Confidence** | Hope and pray | Mathematical guarantees |
-
-## 📚 Key Differences from PyTorch nanoGPT
-
-1. **JAX Functional Paradigm**: Immutable parameters, explicit random keys
-2. **RAX Type Safety**: Shape-validated operations with clear error messages
-3. **Compile-Time Validation**: Errors caught before training, not during
-4. **Memory Analysis**: OOM prevention through static analysis
-5. **Self-Documenting**: Function signatures contain complete shape information
-
-## 🎓 Learning Resources
+## Resources
 
 - **Original nanoGPT**: [Andrej Karpathy's implementation](https://github.com/karpathy/nanoGPT)
 
