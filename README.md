@@ -2,11 +2,11 @@
 
 A JAX/RAX implementation of nanoGPT that transforms "hope it works" into "know it works" through compile-time shape validation, memory safety checks, and explicit type documentation.
 
-## 🚀 Why RAX-nanoGPT?
+## Why RAX-nanoGPT?
 
 Traditional deep learning development is error-prone - shape mismatches, OOM crashes, and unclear tensor dimensions waste hours of compute time. RAX-nanoGPT solves this with:
 
-### 💡 **Compile-Time Safety**
+### **Compile-Time Safety**
 ```python
 # ❌ Without RAX: Discover shape errors after hours of training
 def train_step(params, x, y):  # What shapes? Who knows!
@@ -24,17 +24,17 @@ def train_step(
     # RAX validates shapes at compile time - no surprises!
 ```
 
-### 🔒 **Memory Safety**
+### **Memory Safety**
 - **OOM Prevention**: RAX analyzes memory usage before training starts
 - **Early Warnings**: Get memory estimates and optimization suggestions  
 - **No Wasted Compute**: Bad configurations caught in seconds, not hours
 
-### 📝 **Self-Documenting Code**
+### **Self-Documenting Code**
 - **Shape Annotations**: Every tensor parameter documents its expected dimensions
 - **IDE Support**: Autocomplete knows exact tensor shapes  
 - **Team Onboarding**: New developers understand code structure instantly
 
-### ⚡ **Zero Performance Overhead**
+### **Zero Performance Overhead**
 - **Same Speed**: RAX validation happens at compile time, not runtime
 - **JIT Optimized**: Automatic static argument detection for optimal performance
 - **Production Ready**: All safety checks with no runtime cost
@@ -78,7 +78,7 @@ step 100: train loss 6.5919, val loss 6.6791
 rax run sample.py --out_dir=out-shakespeare --start="ROMEO:" --max_new_tokens=200
 ```
 
-## 🛡️ RAX Safety Features in Action
+## RAX Safety Features in Action
 
 ### 1. Shape Validation
 ```python
@@ -112,7 +112,7 @@ def attention(
 # Suggestion: Check your DataLoader block_size configuration
 ```
 
-## 🔧 Development Workflow
+## Development Workflow
 
 ### With RAX (Recommended)
 ```bash
@@ -126,7 +126,7 @@ rax run train.py config/my_config.py
 python train.py config/my_config.py
 ```
 
-## 📈 Performance & Results
+## Performance & Results
 TBD
 
 ### Benchmark Results
