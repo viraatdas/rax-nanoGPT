@@ -39,12 +39,6 @@ def train_step(
 - **JIT Optimized**: Automatic static argument detection for optimal performance
 - **Production Ready**: All safety checks with no runtime cost
 
-## 🎯 Real-World Impact
-
-**Time Saved**: 2-20 hours of compute per caught error  
-**Code Clarity**: 10x better with explicit shape documentation  
-**Confidence**: Know your model will train successfully before starting  
-
 ## Quick Start
 
 ### Installation
@@ -118,44 +112,6 @@ def attention(
 # Suggestion: Check your DataLoader block_size configuration
 ```
 
-## 🏗️ Architecture & Implementation
-
-### Model Components
-- **Transformer blocks** with multi-head self-attention
-- **Position embeddings** and layer normalization  
-- **GELU activations** in MLP blocks
-- **Causal masking** for autoregressive generation
-- **Weight tying** between embeddings and output projection
-
-### RAX-Enhanced Features
-```python
-# Every function has documented shapes
-def gpt_forward(
-    x: Int[Array, "batch seq_len"],
-    params: GPTParams, 
-    config: GPTConfig,
-    key: PRNGKeyArray,
-    training: bool = True,
-    targets: Optional[Int[Array, "batch seq_len"]] = None
-) -> Tuple[Float[Array, "batch seq_len vocab_size"], Float[Array, ""]]:
-    # Implementation with compile-time safety guarantees
-```
-
-## 📊 Training Configuration
-
-Key parameters with RAX validation:
-```python
-@dataclass(frozen=True)  # Immutable for JAX compatibility
-class TrainConfig:
-    n_layer: int = 6        # Transformer blocks
-    n_head: int = 6         # Attention heads  
-    n_embd: int = 384       # Embedding dimension
-    block_size: int = 256   # Sequence length
-    batch_size: int = 64    # Batch size (RAX checks memory fit)
-    learning_rate: float = 1e-3
-    max_iters: int = 5000
-```
-
 ## 🔧 Development Workflow
 
 ### With RAX (Recommended)
@@ -185,14 +141,6 @@ Speed: ~15-17 seconds per 10 iterations
 Memory: Efficient GPU utilization with safety checks
 ```
 
-## 🤝 Contributing
-
-This implementation demonstrates how RAX transforms traditional ML development:
-
-1. **Fork** and create your feature branch
-2. **Add RAX annotations** to any new functions
-3. **Test** with `rax run` to ensure safety compliance
-4. **Submit** PR with confidence that shapes are validated
 
 ## 🏆 Comparison: Before vs After RAX
 
@@ -215,16 +163,8 @@ This implementation demonstrates how RAX transforms traditional ML development:
 
 ## 🎓 Learning Resources
 
-- **JAX**: [Official JAX documentation](https://jax.readthedocs.io/)
-- **RAX**: [RAX repository](https://github.com/viraatdas/rax) 
-- **jaxtyping**: [Shape annotation library](https://github.com/patrick-kidger/jaxtyping)
 - **Original nanoGPT**: [Andrej Karpathy's implementation](https://github.com/karpathy/nanoGPT)
 
-## 📄 License
 
-MIT - See original [nanoGPT](https://github.com/karpathy/nanoGPT) for attribution.
 
 ---
-
-**Transform your ML development**: From runtime crashes to compile-time confidence with RAX-nanoGPT! 🚀
-# rax-nanoGPT
