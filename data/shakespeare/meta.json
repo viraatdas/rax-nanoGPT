@@ -1,0 +1,6 @@
+{
+  "vocab_size": 50257,
+  "tokenizer": "gpt2",
+  "train_tokens": 304222,
+  "val_tokens": 33803
+}

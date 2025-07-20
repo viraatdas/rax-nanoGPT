@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Training outputs and logs
+*.log
+*.pkl
+out-*/
+
+# IDE and system files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data files (keep structure but ignore large binaries)
+data/*/train.bin
+data/*/val.bin
