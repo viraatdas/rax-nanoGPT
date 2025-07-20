@@ -4,7 +4,7 @@ A JAX/RAX implementation of nanoGPT that transforms "hope it works" into "know i
 
 ## Why RAX-nanoGPT?
 
-Traditional deep learning development is error-prone - shape mismatches, OOM crashes, and unclear tensor dimensions waste hours of compute time. RAX-nanoGPT solves this with:
+Traditional deep learning development is error-prone - shape mismatches, OOM crashes, and unclear tensor dimensions. RAX-nanoGPT solves this with:
 
 ### **Compile-Time Safety**
 ```python
