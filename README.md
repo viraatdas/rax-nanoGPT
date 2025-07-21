@@ -2,6 +2,8 @@
 
 A minimal JAX/RAX implementation of GPT, inspired by Andrej Karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT).
 
+[Rax](https://github.com/viraatdas/rax.git) provides a compile-time safe interface for JAX, enforcing memory safety and composable patterns in neural network model construction.
+
 ## Install
 
 ```bash
