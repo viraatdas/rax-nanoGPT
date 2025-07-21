@@ -33,7 +33,6 @@ out_dir = 'out-shakespeare'
 checkpoint_interval = 500
 
 # System
-compile = True
 seed = 1337
 
 # Logging

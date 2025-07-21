@@ -12,7 +12,7 @@ import numpy as np
 
 import jax
 import jax.numpy as jnp
-from jax import random, jit, value_and_grad
+from jax import random, value_and_grad
 import optax
 from jaxtyping import Float, Int, PRNGKeyArray, Array
 
@@ -52,7 +52,6 @@ class TrainConfig:
     checkpoint_interval: int = 1000
     
     # System
-    compile: bool = True
     seed: int = 1337
     
     # Logging
@@ -178,7 +177,7 @@ def estimate_loss(
 
 
 def save_checkpoint(params: GPTParams, opt_state: Any, config: TrainConfig, 
-                   model_config: GPTConfig, iter_num: int, best_val_loss: float):
+                   model_config: GPTConfig, iter_num: int, best_val_loss: float) -> None:
     """Save model checkpoint"""
     os.makedirs(config.out_dir, exist_ok=True)
     checkpoint_path = os.path.join(config.out_dir, f'ckpt_{iter_num}.pkl')

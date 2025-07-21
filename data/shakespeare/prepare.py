@@ -7,9 +7,10 @@ import os
 import requests
 import numpy as np
 import tiktoken
+from typing import Tuple
 
 
-def download_shakespeare():
+def download_shakespeare() -> str:
     """Download the tiny Shakespeare dataset"""
     # Download the tiny Shakespeare dataset
     input_file_path = os.path.join(os.path.dirname(__file__), 'input.txt')
@@ -29,7 +30,7 @@ def download_shakespeare():
     return data
 
 
-def tokenize_and_save(data, train_ratio=0.9):
+def tokenize_and_save(data: str, train_ratio: float = 0.9) -> Tuple[np.ndarray, np.ndarray, tiktoken.Encoding]:
     """Tokenize the data using tiktoken and save train/val splits"""
     # Initialize the GPT-2 tokenizer
     enc = tiktoken.get_encoding("gpt2")
@@ -79,7 +80,7 @@ def tokenize_and_save(data, train_ratio=0.9):
     return train_tokens, val_tokens, enc
 
 
-def main():
+def main() -> None:
     """Main function to prepare the Shakespeare dataset"""
     print("Preparing Shakespeare dataset for nanoGPT...")
     
