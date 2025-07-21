@@ -56,29 +56,8 @@ def safe_attention(
     return jax.nn.softmax(scores, axis=-1) @ v
 ```
 
-## Model
-
-The model (`model.py`) implements a standard GPT architecture:
-- Multi-head self-attention
-- Position embeddings
-- Layer normalization
-- GELU activation
-
-All functions have full jaxtyping annotations for safety.
-
-## Training
-
-The training script (`train.py`) implements:
-- AdamW optimizer via optax
-- Cosine learning rate schedule with warmup
-- Gradient clipping
-- Periodic evaluation and checkpointing
-
-Configuration is done through Python files in `config/`.
-
 ## Performance
-
-With RAX's automatic JIT compilation, performance is within ~4% of raw JAX while providing full safety guarantees. The overhead comes from validation, not compilation.
+*Benchmarks coming soon*
 
 ## License
 
