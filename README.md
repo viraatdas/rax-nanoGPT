@@ -12,7 +12,7 @@ uv venv --python 3.13
 source .venv/bin/activate
 
 # Install dependencies
-uv add "rax @ git+https://github.com/viraatdas/rax.git" jax jaxlib jaxtyping numpy tiktoken requests tqdm matplotlib
+uv add "rax @ git+https://github.com/viraatdas/rax.git" 
 ```
 
 ## Quick Start
